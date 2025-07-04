@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about 'Jesus Revealed, Jesus Glorified' by Oluwafemi Odesola, a tribute to Rev. Dr. John Akin Oyelade.">
     <title>About the Book</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="about-book">
     <nav class="navbar">
@@ -48,15 +48,55 @@
             </div>
             <p>It is crucial that such a transformative journey be captured and reflected upon, so that future generations can be inspired by the lessons learnt and the testimony of what God has done through his leadership. This book will not only highlight the milestones achieved under his guidance but also encourage others to embrace the mantle of leadership with humility, faith, and a deep commitment to serving God and His people.</p>
         </div>
+        <div class="countdown-container">
+            <div id="countdown" class="countdown"></div>
+            <p class="launch-text">LAUNCHING SOON!</p>
+        </div>
     </section>
     <footer class="footer">
         <div class="social-links">
             <a href="https://www.facebook.com/share/16LDQ3vMWJ/?mibextid=wwXIfr" target="_blank" data-social="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/huntersolah?igsh=MWZoaWFwaTA3dzc0Zw%3D%3D&utm_source=qr" target="_blank" data-social="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
-           <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
         <p>© 2025 Oluwafemi Odesola. All rights reserved.</p>
     </footer>
+    <script>
+        function updateCountdown() {
+            const launchDate = new Date("July 20, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `
+                <div class="countdown-item"><span class="count">${days}</span><br>Days</div>
+                <div class="countdown-item"><span class="count">${hours}</span><br>Hours</div>
+                <div class="countdown-item"><span class="count">${minutes}</span><br>Minutes</div>
+                <div class="countdown-item"><span class="count">${seconds}</span><br>Seconds</div>
+            `;
+
+            // Smooth transition for numbers
+            const counts = document.querySelectorAll(".count");
+            counts.forEach(count => {
+                count.style.transition = "all 0.5s ease-out";
+                count.style.transform = "scale(1.1)";
+                setTimeout(() => {
+                    count.style.transform = "scale(1)";
+                }, 500);
+            });
+
+            if (distance < 0) {
+                document.getElementById("countdown").innerHTML = "Launched!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>

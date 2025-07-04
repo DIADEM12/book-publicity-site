@@ -25,7 +25,11 @@
     <section class="about-author">
         <div class="about-author-content">
             <h2>About the Author</h2>
-            <div class="about-author-section">
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab('tab1')">Personal Journey</button>
+                <button class="tab-link" onclick="openTab('tab2')">Professional Impact</button>
+            </div>
+            <div id="tab1" class="tab-content active">
                 <div class="text-image-pair">
                     <img src="images/authorpic4.jpg" alt="Oluwafemi Odesola with Family">
                     <div class="text-content">
@@ -34,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-author-section">
+            <div id="tab2" class="tab-content">
                 <div class="text-image-pair">
                     <img src="images/authorpic3.jpg" alt="Oluwafemi Odesola Speaking">
                     <div class="text-content">
@@ -54,5 +58,19 @@
         </div>
         <p>© 2025 Oluwafemi Odesola. All rights reserved.</p>
     </footer>
+    <script>
+        function openTab(tabName) {
+            const tabs = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+            const tabLinks = document.getElementsByClassName('tab-link');
+            for (let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove('active');
+            }
+            document.getElementById(tabName).style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
