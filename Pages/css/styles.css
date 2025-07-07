@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #1a2a44;
     min-height: 100vh;
-    padding: 80px 0 60px;
+    padding: 10vh 0 8vh;
     overflow-x: hidden;
     background: url('../images/authorpic.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -48,7 +48,7 @@ body::before {
 .navbar {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(6px);
-    padding: 1rem 3rem;
+    padding: 1rem 5vw;
     position: fixed;
     top: 0;
     width: 100%;
@@ -57,13 +57,13 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 10vh;
 }
 
 .navbar .logo {
     color: #1a2a44;
     font-family: 'Merriweather', serif;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -81,7 +81,7 @@ body::before {
 
 .navbar a {
     color: #1a2a44;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 700;
     text-decoration: none;
     position: relative;
@@ -110,7 +110,7 @@ body::before {
 
 .contact-info a {
     color: #1a2a44;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -122,13 +122,13 @@ body::before {
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 2rem;
-    margin-bottom: 4rem;
+    padding: 5vh 5vw;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -138,36 +138,36 @@ body::before {
 .hero-content {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: 2.5rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 90%;
     max-width: 800px;
 }
 
 .hero h1 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-size: clamp(2rem, 6vw, 3.5rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 3vh;
     font-weight: 600;
 }
 
 .hero-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: 1.2rem 2.5rem;
+    padding: 2vh 5vw;
     text-decoration: none;
     border-radius: 25px;
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -179,11 +179,11 @@ body::before {
 
 /* About Author Section */
 .about-author {
-    padding: 4rem 2rem;
-    width: 100%;
+    padding: 5vh 5vw;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -193,7 +193,7 @@ body::before {
 .about-author-content {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
-    padding: 3rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -203,14 +203,14 @@ body::before {
     font-size: clamp(2rem, 5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-bottom: 2rem;
+    margin-bottom: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .tabs {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2vh;
     flex-wrap: wrap;
 }
 
@@ -218,7 +218,7 @@ body::before {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     border: none;
-    padding: 1rem 2rem;
+    padding: 1.5vh 3vw;
     font-family: 'Merriweather', serif;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-weight: 700;
@@ -240,7 +240,7 @@ body::before {
 
 .tab-content {
     display: none;
-    padding: 1rem;
+    padding: 2vh 0;
 }
 
 .tab-content.active {
@@ -249,8 +249,8 @@ body::before {
 
 .text-image-pair {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 1rem;
+    gap: 2vw;
+    margin-bottom: 2vh;
     align-items: center;
 }
 
@@ -274,7 +274,7 @@ body::before {
 .social-links a {
     color: #ffaa80;
     font-size: clamp(1.5rem, 4vw, 1.8rem);
-    margin: 0 1.5rem;
+    margin: 0 1.5vw;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -283,7 +283,7 @@ body::before {
     transform: scale(1.2);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .text-image-pair {
         flex-direction: column;
         text-align: center;
@@ -298,24 +298,21 @@ body::before {
         width: 100%;
         text-align: center;
     }
-}
-
-@media (max-width: 768px) {
     .about-author {
-        padding: 2rem 1rem;
+        padding: 3vh 2vw;
     }
     .about-author-content {
-        padding: 1.5rem;
+        padding: 2vh 3vw;
     }
 }
 
 /* Book Details Section */
 .book-details {
-    padding: 4rem 2rem;
-    width: 100%;
+    padding: 5vh 5vw;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -327,19 +324,19 @@ body::before {
     font-size: clamp(2rem, 5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .book-card {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: 2rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 2vw;
+    margin-bottom: 2vh;
     align-items: center;
 }
 
@@ -352,7 +349,7 @@ body::before {
     font-size: clamp(1.8rem, 4vw, 2.2rem);
     font-weight: 800;
     color: #1a2a44;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -360,15 +357,15 @@ body::before {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: #333;
     font-weight: 600;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5vh;
 }
 
 .book-card-text h4 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
     color: #1a2a44;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -388,7 +385,7 @@ body::before {
 .order-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: 1.2rem 2.5rem;
+    padding: 2vh 5vw;
     text-decoration: none;
     border-radius: 25px;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
@@ -402,13 +399,13 @@ body::before {
 }
 
 .button-spacing {
-    margin: 1rem 0;
+    margin: 2vh 0;
 }
 
 .book-details-content {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
-    padding: 2rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -418,14 +415,14 @@ body::before {
     font-size: clamp(1.5rem, 4vw, 2rem);
     font-weight: 700;
     color: #1a2a44;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .text-image-pair {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 2vw;
+    margin-bottom: 2vh;
     align-items: center;
 }
 
@@ -448,14 +445,14 @@ body::before {
 
 .countdown-container {
     text-align: center;
-    margin: 2rem 0;
+    margin: 3vh 0;
 }
 
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 2vw;
+    padding: 2vh 2vw;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     border-radius: 15px;
@@ -465,11 +462,11 @@ body::before {
 
 .countdown-item {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5vh 1vw;
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     border-radius: 10px;
     color: #1a2a44;
-    min-width: 80px;
+    min-width: 15vw;
     position: relative;
     overflow: hidden;
 }
@@ -499,11 +496,11 @@ body::before {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-top: 1rem;
+    margin-top: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .book-card {
         flex-direction: column;
         text-align: center;
@@ -518,32 +515,29 @@ body::before {
     .text-image-pair img {
         max-width: 100%;
     }
-}
-
-@media (max-width: 768px) {
     .book-details {
-        padding: 2rem 1rem;
+        padding: 3vh 2vw;
     }
     .book-card {
-        padding: 1.5rem;
+        padding: 2vh 3vw;
     }
     .countdown {
         flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+        gap: 2vh;
+        padding: 2vh 2vw;
     }
     .countdown-item {
-        min-width: 60px;
+        min-width: 30vw;
     }
 }
 
 /* Sendforth Program Section */
 .sendforth {
-    padding: 4rem 2rem;
-    width: 100%;
+    padding: 5vh 5vw;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -553,7 +547,7 @@ body::before {
 .sendforth-content {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: 2rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -564,22 +558,22 @@ body::before {
     font-size: clamp(2rem, 5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .stepper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2vw;
+    max-width: 80%;
+    margin: 0 auto 2vh;
 }
 
 .stepper-item {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
-    padding: 1rem;
+    padding: 2vh 2vw;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -593,7 +587,7 @@ body::before {
 .stepper-item i {
     color: #ffaa80;
     font-size: 1.4rem;
-    margin-right: 0.8rem;
+    margin-right: 1vw;
     transition: transform 0.3s ease;
 }
 
@@ -619,7 +613,7 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 2vh;
 }
 
 .side-image:hover {
@@ -630,7 +624,7 @@ body::before {
 .rsvp-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: 1.2rem 2.5rem;
+    padding: 2vh 5vw;
     text-decoration: none;
     border-radius: 25px;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
@@ -644,19 +638,19 @@ body::before {
 }
 
 .button-spacing {
-    margin: 1rem 0;
+    margin: 2vh 0;
 }
 
 .countdown-container {
     text-align: center;
-    margin: 2rem 0;
+    margin: 3vh 0;
 }
 
 .countdown {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 2vw;
+    padding: 2vh 2vw;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     border-radius: 15px;
@@ -666,11 +660,11 @@ body::before {
 
 .countdown-item {
     text-align: center;
-    padding: 1rem;
+    padding: 1.5vh 1vw;
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     border-radius: 10px;
     color: #1a2a44;
-    min-width: 80px;
+    min-width: 15vw;
     position: relative;
     overflow: hidden;
 }
@@ -700,49 +694,40 @@ body::before {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-top: 1rem;
+    margin-top: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1024px) {
-    .stepper {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .side-image {
-        max-width: 50%;
-    }
-}
-
 @media (max-width: 768px) {
-    .sendforth {
-        padding: 2rem 1rem;
-    }
-    .sendforth-content {
-        padding: 1.5rem;
-    }
     .stepper {
         grid-template-columns: 1fr;
     }
     .side-image {
         max-width: 100%;
     }
+    .sendforth {
+        padding: 3vh 2vw;
+    }
+    .sendforth-content {
+        padding: 2vh 3vw;
+    }
     .countdown {
         flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+        gap: 2vh;
+        padding: 2vh 2vw;
     }
     .countdown-item {
-        min-width: 60px;
+        min-width: 30vw;
     }
 }
 
 /* Contact Section */
 .contact {
-    padding: 4rem 2rem;
-    width: 100%;
+    padding: 5vh 5vw;
+    width: 90%;
     max-width: 1400px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -752,7 +737,7 @@ body::before {
 .contact-content {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: 3rem;
+    padding: 3vh 5vw;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -763,10 +748,10 @@ body::before {
 
 .contact-layout {
     display: flex;
-    gap: 3rem;
+    gap: 3vw;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 90%;
 }
 
 .contact h2 {
@@ -774,36 +759,37 @@ body::before {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 900;
     color: #1a2a44;
-    margin-bottom: 2rem;
+    margin-bottom: 2vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .contact p {
-    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     color: #333;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 2vh;
 }
 
 .form-instruction {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
     color: #1a2a44;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2vh;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .contact-form input, .contact-form textarea {
-    padding: 1.2rem;
+    padding: 2vh 3vw;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -821,7 +807,7 @@ body::before {
 .contact-form button {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: 1.5rem;
+    padding: 2vh 5vw;
     border: none;
     border-radius: 30px;
     font-size: clamp(1.2rem, 3vw, 1.4rem);
@@ -836,13 +822,13 @@ body::before {
 }
 
 .social-links {
-    margin-top: 2.5rem;
+    margin-top: 2.5vh;
 }
 
 .social-links a {
     color: #ffaa80;
     font-size: clamp(2rem, 5vw, 2.5rem);
-    margin: 0 2rem;
+    margin: 0 2vw;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -875,32 +861,32 @@ body::before {
 
 @media (max-width: 768px) {
     .contact {
-        padding: 2rem 1rem;
+        padding: 3vh 2vw;
     }
     .contact-content {
-        padding: 1.5rem;
+        padding: 2vh 3vw;
     }
     .contact-layout {
-        gap: 1.5rem;
+        gap: 2vh;
     }
     .side-image {
         max-width: 100%;
     }
     .contact-form {
-        max-width: 100%;
+        width: 100%;
     }
     .social-links a {
-        margin: 0 1rem;
+        margin: 0 1.5vw;
     }
 }
 
 /* Purchase Section */
 .purchase {
-    padding: 4rem 2rem;
-    width: 100%;
+    padding: 5vh 5vw;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 4rem;
+    margin-bottom: 5vh;
     position: relative;
     z-index: 1;
     opacity: 0;
@@ -910,11 +896,11 @@ body::before {
 .purchase .book-card {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: 2rem;
+    padding: 3vh 5vw;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
-    gap: 2rem;
+    gap: 2vw;
     align-items: center;
 }
 
@@ -922,7 +908,7 @@ body::before {
     font-size: clamp(1.8rem, 4vw, 2.2rem);
     font-weight: 800;
     color: #1a2a44;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vh;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -930,14 +916,14 @@ body::before {
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     color: #333;
     font-weight: 600;
-    line-height: 1.8;
-    margin-bottom: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5vh;
 }
 
 .buy-now-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: 1.2rem 2.5rem;
+    padding: 2vh 5vw;
     text-decoration: none;
     border-radius: 25px;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
@@ -950,7 +936,7 @@ body::before {
     box-shadow: 0 6px 20px rgba(255, 170, 128, 0.4);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .purchase .book-card {
         flex-direction: column;
         text-align: center;
@@ -958,14 +944,11 @@ body::before {
     .purchase .book-card img {
         max-width: 100%;
     }
-}
-
-@media (max-width: 768px) {
     .purchase {
-        padding: 2rem 1rem;
+        padding: 3vh 2vw;
     }
     .purchase .book-card {
-        padding: 1.5rem;
+        padding: 2vh 3vw;
     }
 }
 
@@ -980,7 +963,7 @@ body::before {
     bottom: 0;
     width: 100%;
     z-index: 1000;
-    height: 60px;
+    height: 8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -988,13 +971,13 @@ body::before {
 }
 
 .footer .social-links {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1vh;
 }
 
 .footer .social-links a {
     color: #ffaa80;
     font-size: clamp(1rem, 3vw, 1.3rem);
-    margin: 0 1rem;
+    margin: 0 1.5vw;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -1049,33 +1032,46 @@ body::before {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .navbar {
-        padding: 1rem 1.5rem;
+        padding: 1rem 3vw;
     }
     .navbar ul {
-        gap: 1.5rem;
+        gap: 1.5vw;
     }
     .hero {
-        padding: 2rem 1rem;
+        padding: 3vh 3vw;
     }
     .hero-content {
-        padding: 1.5rem;
+        padding: 2vh 3vw;
     }
     .about-author, .book-details, .sendforth, .contact, .purchase {
-        padding: 2rem 1rem;
+        padding: 3vh 3vw;
+    }
+    .text-image-pair, .book-card, .contact-layout, .purchase .book-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-image-pair img, .book-card img, .side-image {
+        max-width: 70%;
+    }
+    .stepper {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        height: 70px;
-        padding: 1rem;
+        height: 12vh;
+        padding: 1rem 2vw;
     }
     .navbar ul {
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 1vw;
+        margin-top: 1vh;
     }
     .footer .social-links a {
-        margin: 0 0.8rem;
+        margin: 0 1vw;
+    }
+    .stepper {
+        grid-template-columns: 1fr;
     }
 }
