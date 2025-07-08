@@ -1,99 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Oluwafemi Odesola for inquiries about his book and events.">
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Oluwafemi Odesola for inquiries about his book and events." />
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body class="contact">
-    <nav class="navbar">
-        <div class="contact-info">
-            <!-- Email removed from header -->
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-author.html">About</a></li>
-            <li><a href="about-book.html">Book</a></li>
-            <li><a href="purchase.html">Purchase</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section class="contact-content">
-        <h2>Contact Us</h2>
-        <p>Have questions about the book or the Sendforth Program? Feel free to reach out!</p>
-        <div class="contact-details">
-            <form class="contact-form" netlify name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
-                <div class="form-instruction">Please fill out the form below:</div>
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="send-btn">Send Message</button>
-            </form>
-            <img src="images/authorpic5.jpg" alt="Contact Illustration" class="side-image">
-        </div>
-        <p class="additional-info">We’re here to assist you.</p>
-        <p class="email-option">or email me at <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a></p>
-    </section>
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://www.facebook.com/share/16LDQ3vMWJ/?mibextid=wwXIfr" target="_blank" data-social="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/huntersolah?igsh=MWZoaWFwaTA3dzc0Zw%3D%3D&utm_source=qr" target="_blank" data-social="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p>Oluwafemi Odesola © 2025. All rights reserved.</p>
-    </footer>
-    <script>
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = this;
-            const button = form.querySelector('.send-btn');
-            const formContainer = form.parentElement;
+  <nav class="navbar">
+    <div class="contact-info">
+      <!-- Email removed from header -->
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-author.html">About</a></li>
+      <li><a href="about-book.html">Book</a></li>
+      <li><a href="purchase.html">Purchase</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-            // Add loading animation
-            button.disabled = true;
-            button.classList.add('sending');
-            button.textContent = 'Sending...';
+  <section class="contact-content">
+    <h2>Contact Us</h2>
+    <p>Have questions about the book or the Sendforth Program? Feel free to reach out!</p>
+    <div class="contact-details">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="thank-you.html">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <div class="form-instruction">Please fill out the form below:</div>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+      <img src="images/authorpic5.jpg" alt="Contact Illustration" class="side-image" />
+    </div>
+    <p class="additional-info">We’re here to assist you.</p>
+    <p class="email-option">or email me at <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a></p>
+  </section>
 
-            // Simulate form submission (replace with actual API call if needed)
-            setTimeout(() => {
-                fetch('/', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(new FormData(form)).toString()
-                })
-                .then(() => {
-                    // Success animation
-                    button.classList.remove('sending');
-                    button.classList.add('success');
-                    button.innerHTML = '<i class="fas fa-check"></i> Sent!';
-
-                    // Confetti effect
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    document.body.appendChild(confetti);
-                    setTimeout(() => confetti.remove(), 2000);
-
-                    // Fade out form and show thank-you message
-                    formContainer.style.opacity = '0';
-                    setTimeout(() => {
-                        formContainer.innerHTML = '<p style="color: #1a2a44; font-weight: 600; text-align: center;">Thank you for your message! We will get back to you soon.</p>';
-                        formContainer.style.opacity = '1';
-                    }, 500);
-                })
-                .catch(error => {
-                    button.classList.remove('sending');
-                    button.disabled = false;
-                    button.textContent = 'Send Message';
-                    alert('Error sending message. Please try again.');
-                });
-            }, 1000); // Simulated delay
-        });
-    </script>
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/16LDQ3vMWJ/?mibextid=wwXIfr" target="_blank" data-social="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/huntersolah?igsh=MWZoaWFwaTA3dzc0Zw%3D%3D&utm_source=qr" target="_blank" data-social="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>Oluwafemi Odesola © 2025. All rights reserved.</p>
+  </footer>
 </body>
 </html>

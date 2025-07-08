@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #tsparticles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .thankyou-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      padding: 40px 30px;
+      text-align: center;
+      color: #fff;
+      max-width: 500px;
+      width: 90%;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .thankyou-container h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      animation: slideIn 1s ease;
+    }
+
+    .thankyou-container p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #e0f7ff;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #00aaff;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      background: #007acc;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(0, 170, 255, 0.6);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="tsparticles"></div>
+
+  <div class="thankyou-container">
+    <h1>Thank You!</h1>
+    <p>Your message has been received. We’ll get back to you soon.</p>
+    <a href="index.html" class="back-btn"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      particles: {
+        number: { value: 80 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: { min: 1, max: 4 } },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "top",
+          straight: false,
+          outModes: { default: "out" }
+        }
+      },
+      detectRetina: true
+    });
+  </script>
+</body>
+</html>
