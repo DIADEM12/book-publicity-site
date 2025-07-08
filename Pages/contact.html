@@ -10,7 +10,9 @@
 </head>
 <body class="contact">
     <nav class="navbar">
-        <a href="index.html" class="logo">Oluwafemi Odesola</a>
+        <div class="contact-info">
+            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about-author.html">About</a></li>
@@ -18,32 +20,23 @@
             <li><a href="purchase.html">Purchase</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="contact-info">
-            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
-        </div>
     </nav>
-    <section class="contact">
-        <div class="contact-content">
-            <h2>Contact Us</h2>
-            <p>Have questions about the book or the Sendforth Program? Feel free to reach out!</p>
-            <div class="contact-layout">
-                <div class="contact-form" netlify>
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div class="form-instruction">Please fill out the form below:</div>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
-                </div>
-                <img src="images/authorpic5.jpg" alt="Contact Illustration" class="side-image">
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/share/16LDQ3vMWJ/?mibextid=wwXIfr" target="_blank" data-social="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/huntersolah?igsh=MWZoaWFwaTA3dzc0Zw%3D%3D&utm_source=qr" target="_blank" data-social="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+    <section class="contact-content">
+        <h2>Contact Us</h2>
+        <p>Have questions about the book or the Sendforth Program? Feel free to reach out!</p>
+        <div class="contact-details">
+            <form class="contact-form" netlify name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+                <div class="form-instruction">Please fill out the form below:</div>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <img src="images/authorpic5.jpg" alt="Contact Illustration" class="side-image">
         </div>
+        <p class="additional-info">We’re here to assist you.</p>
     </section>
     <footer class="footer">
         <div class="social-links">
@@ -52,7 +45,22 @@
             <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>© 2025 Oluwafemi Odesola. All rights reserved.</p>
+        <p>Oluwafemi Odesola © 2025. All rights reserved.</p>
     </footer>
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(form)).toString()
+            })
+            .then(() => {
+                form.innerHTML = '<p style="color: #1a2a44; font-weight: 600;">Thank you for your message! We will get back to you soon.</p>';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>

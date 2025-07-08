@@ -10,7 +10,9 @@
 </head>
 <body class="sendforth">
     <nav class="navbar">
-        <a href="index.html" class="logo">Oluwafemi Odesola</a>
+        <div class="contact-info">
+            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about-author.html">About</a></li>
@@ -18,35 +20,31 @@
             <li><a href="purchase.html">Purchase</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="contact-info">
-            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
-        </div>
     </nav>
-    <section class="sendforth">
-        <div class="sendforth-content">
-            <h2>Sendforth Program</h2>
-            <div class="stepper">
-                <div class="stepper-item">
-                    <i class="fas fa-calendar"></i>
-                    <p><strong>Date:</strong> July 15, 2025</p>
-                </div>
-                <div class="stepper-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><strong>Venue:</strong> Fountain of Peace Baptist Church, Òyó</p>
-                </div>
-                <div class="stepper-item">
-                    <i class="fas fa-info-circle"></i>
-                    <p><strong>Purpose:</strong> This event honors Rev. Dr. John Akin Oyelade for his transformative leadership at Fountain of Peace Baptist Church, celebrating his legacy as depicted in 'Jesus Revealed, Jesus Glorified.' It’s a call to continue his work of revealing Christ and glorifying God.</p>
-                </div>
+    <section class="sendforth-content">
+        <h2>Sendforth Program</h2>
+        <div class="sendforth-details">
+            <div class="detail-item">
+                <i class="fas fa-calendar"></i>
+                <p><strong>Date:</strong> July 15, 2025</p>
             </div>
-            <div class="countdown-container">
-                <div id="countdown" class="countdown"></div>
-                <p class="launch-text">LAUNCHING SOON!</p>
+            <div class="detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Venue:</strong> Fountain of Peace Baptist Church, Òyó</p>
             </div>
-            <img src="images/sendforth1.jpg" alt="Sendforth Event" class="side-image">
-            <div class="button-spacing">
-                <a href="contact.html" class="rsvp-btn">RSVP Now</a>
+            <div class="detail-item">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Purpose:</strong> This event honors Rev. Dr. John Akin Oyelade for his transformative leadership at Fountain of Peace Baptist Church, celebrating his legacy as depicted in 'Jesus Revealed, Jesus Glorified.' It’s a call to continue his work of revealing Christ and glorifying God.</p>
             </div>
+        </div>
+        <img src="images/sendforth1.jpg" alt="Sendforth Event" class="side-image">
+        <p class="additional-info">Join us for a day of celebration, reflection, and inspiration as we send forth a remarkable servant of God. Your presence will make this occasion even more special.</p>
+        <div class="button-spacing">
+            <a href="contact.html" class="rsvp-btn">RSVP Now</a>
+        </div>
+        <div class="countdown-container">
+            <div id="countdown" class="countdown"></div>
+            <p class="launch-text">LAUNCHING SOON!</p>
         </div>
     </section>
     <footer class="footer">
@@ -56,7 +54,7 @@
             <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>© 2025 Oluwafemi Odesola. All rights reserved.</p>
+        <p>Oluwafemi Odesola © 2025. All rights reserved.</p>
     </footer>
     <script>
         function updateCountdown() {
@@ -76,7 +74,6 @@
                 <div class="countdown-item"><span class="count">${seconds}</span><br>Seconds</div>
             `;
 
-            // Smooth transition for numbers
             const counts = document.querySelectorAll(".count");
             counts.forEach(count => {
                 count.style.transition = "all 0.5s ease-out";

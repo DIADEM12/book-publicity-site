@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about 'Jesus Revealed, Jesus Glorified' by Oluwafemi Odesola, a tribute to Rev. Dr. John Akin Oyelade.">
-    <title>About the Book</title>
+    <title>Book</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="about-book">
     <nav class="navbar">
-        <a href="index.html" class="logo">Oluwafemi Odesola</a>
+        <div class="contact-info">
+            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
+        </div>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about-author.html">About</a></li>
@@ -18,23 +20,22 @@
             <li><a href="purchase.html">Purchase</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="contact-info">
-            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
-        </div>
     </nav>
     <section class="book-details">
         <h2>About the Book</h2>
         <div class="book-card">
-            <img src="images/booksite2.jpg" alt="Book Cover">
-            <div class="book-card-text">
-                <h3>Jesus Revealed, Jesus Glorified</h3>
-                <h4>The Legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church</h4>
-                <p>This book is a tribute, a testimony, and a timeless record of a man whose life and ministry have revealed Christ and glorified Him without distraction. Through personal stories, eyewitness accounts, messages, prayers, and moments of impact, it captures the spiritual legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church, Òyó. More than a chronicle, it’s a celebration of divine purpose fulfilled through obedience, calling readers to behold Christ’s beauty and continue glorifying Him.</p>
-                <p>Whether you’re a church member, minister, mentee, or curious about authentic Christian leadership, this book will inspire you to pursue a life that reveals and glorifies Jesus above all.</p>
-                <div class="button-spacing">
-                    <a href="sendforth.html" class="order-btn">Learn About the Sendforth Program</a>
-                    <a href="purchase.html" class="order-btn">Buy Now</a>
+            <div class="book-card-layout">
+                <img src="images/booksite2.jpg" alt="Book Cover">
+                <div class="book-card-text">
+                    <h3>Jesus Revealed, Jesus Glorified</h3>
+                    <h4>The Legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church</h4>
+                    <p>This book is a tribute, a testimony, and a timeless record of a man whose life and ministry have revealed Christ and glorified Him without distraction. Through personal stories, eyewitness accounts, messages, prayers, and moments of impact, it captures the spiritual legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church, Òyó. More than a chronicle, it’s a celebration of divine purpose fulfilled through obedience, calling readers to behold Christ’s beauty and continue glorifying Him.</p>
+                    <p>Whether you’re a church member, minister, mentee, or curious about authentic Christian leadership, this book will inspire you to pursue a life that reveals and glorifies Jesus above all.</p>
                 </div>
+            </div>
+            <div class="button-container">
+                <a href="sendforth.html" class="order-btn" style="float: left;">Learn About the Sendforth Program</a>
+                <a href="purchase.html" class="order-btn" style="float: right;">Buy Now</a>
             </div>
         </div>
         <div class="book-details-content">
@@ -60,7 +61,7 @@
             <a href="https://x.com/huntersola_v?s=21" target="_blank" data-social="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/odesola-oluwafemi-0b6039b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bocd2dvfVR3%2BqgZa63bonQQ%3D%3D" target="_blank" data-social="LinkedIn"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>© 2025 Oluwafemi Odesola. All rights reserved.</p>
+        <p>Oluwafemi Odesola © 2025. All rights reserved.</p>
     </footer>
     <script>
         function updateCountdown() {
@@ -80,7 +81,6 @@
                 <div class="countdown-item"><span class="count">${seconds}</span><br>Seconds</div>
             `;
 
-            // Smooth transition for numbers
             const counts = document.querySelectorAll(".count");
             counts.forEach(count => {
                 count.style.transition = "all 0.5s ease-out";

@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #1a2a44;
     min-height: 100vh;
-    padding: 12vh 0 8vh; /* Increased to accommodate fixed header */
+    padding: 12vh 0 8vh;
     overflow-x: hidden;
     background: url('../images/authorpic.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -57,32 +57,25 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: clamp(6vh, 10vh, 10vh);
     min-height: 60px;
 }
 
-.navbar .logo {
-    color: #1a2a44;
-    font-family: 'Merriweather', serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navbar .logo:hover {
-    color: #ff8c42;
+.navbar .contact-info {
+    margin-left: clamp(1vw, 2rem, 3vw);
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: clamp(1rem, 2vw, 2.5rem); /* Increased spacing */
+    gap: clamp(1.5rem, 3vw, 4vw);
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .navbar a {
     color: #1a2a44;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     font-weight: 700;
     text-decoration: none;
     position: relative;
@@ -111,7 +104,7 @@ body::before {
 
 .contact-info a {
     color: #1a2a44;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -142,13 +135,12 @@ body::before {
     padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: clamp(300px, 80%, 800px);
+    width: clamp(300px, 80vw, 800px);
 }
 
 .hero h1 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
     font-weight: 900;
     color: #1a2a44;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
@@ -156,7 +148,7 @@ body::before {
 }
 
 .hero p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     color: #333;
     margin-bottom: clamp(2vh, 3vw, 3vh);
     font-weight: 600;
@@ -165,10 +157,10 @@ body::before {
 .hero-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
     text-decoration: none;
     border-radius: 25px;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -182,7 +174,7 @@ body::before {
 .about-author {
     padding: clamp(3vh, 5vw, 5vh) clamp(2vw, 3rem, 5vw);
     width: 90%;
-    max-width: clamp(600px, 90%, 1200px);
+    max-width: clamp(600px, 90vw, 1200px);
     margin: 0 auto;
     margin-bottom: clamp(3vh, 5vw, 5vh);
     position: relative;
@@ -194,14 +186,14 @@ body::before {
 .about-author-content {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-author-content h2 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
@@ -219,9 +211,9 @@ body::before {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     border: none;
-    padding: clamp(1vh, 1.5vw, 1.5vh) clamp(2vw, 2.5rem, 3vw);
+    padding: clamp(1vh, 1.5vw, 1.5vh) clamp(1.5vw, 2rem, 3vw);
     font-family: 'Merriweather', serif;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     font-weight: 700;
     color: #1a2a44;
     cursor: pointer;
@@ -274,7 +266,7 @@ body::before {
 
 .social-links a {
     color: #ffaa80;
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
     margin: 0 clamp(1vw, 1.5rem, 1.5vw);
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -306,7 +298,7 @@ body::before {
         padding: clamp(2vh, 3vw, 3vh) 2vw;
     }
     .about-author-content {
-        padding: clamp(1.5vh, 2vw, 2vh) 3vw;
+        padding: clamp(1.5vh, 2vw, 2vh) 2.5vw;
     }
 }
 
@@ -314,7 +306,7 @@ body::before {
 .book-details {
     padding: clamp(3vh, 5vw, 5vh) clamp(2vw, 3rem, 5vw);
     width: 90%;
-    max-width: clamp(600px, 90%, 1200px);
+    max-width: clamp(600px, 90vw, 1200px);
     margin: 0 auto;
     margin-bottom: clamp(3vh, 5vw, 5vh);
     position: relative;
@@ -325,7 +317,7 @@ body::before {
 
 .book-details h2 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
@@ -335,12 +327,15 @@ body::before {
 .book-card {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: clamp(2vh, 3vw, 2vh);
+}
+
+.book-card-layout {
     display: flex;
     gap: clamp(1vw, 2rem, 2vw);
-    margin-bottom: clamp(2vh, 3vw, 2vh);
     align-items: center;
 }
 
@@ -350,7 +345,7 @@ body::before {
 }
 
 .book-card-text h3 {
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 800;
     color: #1a2a44;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -358,7 +353,7 @@ body::before {
 }
 
 .book-card-text p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     color: #333;
     font-weight: 600;
     line-height: 1.6;
@@ -366,7 +361,7 @@ body::before {
 }
 
 .book-card-text h4 {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 700;
     color: #1a2a44;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -386,13 +381,21 @@ body::before {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 clamp(2.5vw, 3.5rem, 5vw);
+    margin-top: clamp(1vh, 1.5vw, 2vh);
+}
+
 .order-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
     text-decoration: none;
     border-radius: 25px;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -409,14 +412,14 @@ body::before {
 .book-details-content {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .book-details-content h3 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 700;
     color: #1a2a44;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -456,7 +459,7 @@ body::before {
     display: flex;
     justify-content: center;
     gap: clamp(1vw, 1.5rem, 2vw);
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(1vw, 1.5rem, 2vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(1vw, 1.5rem, 2vw);
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     border-radius: 15px;
@@ -477,7 +480,7 @@ body::before {
 
 .count {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 900;
     display: block;
     transition: all 0.5s ease-out;
@@ -497,7 +500,7 @@ body::before {
 
 .launch-text {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 900;
     color: #1a2a44;
     margin-top: clamp(1vh, 1.5vw, 2vh);
@@ -505,11 +508,11 @@ body::before {
 }
 
 @media (max-width: 1024px) {
-    .book-card {
+    .book-card-layout {
         flex-direction: column;
         text-align: center;
     }
-    .book-card img {
+    .book-card-layout img {
         max-width: 70%;
     }
     .text-image-pair {
@@ -519,6 +522,16 @@ body::before {
     .text-image-pair img {
         max-width: 70%;
     }
+    .button-container {
+        flex-direction: column;
+        gap: clamp(1vh, 1.5vw, 2vh);
+        padding: 0;
+    }
+    .button-container .order-btn {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -526,12 +539,12 @@ body::before {
         padding: clamp(2vh, 3vw, 3vh) 2vw;
     }
     .book-card {
-        padding: clamp(1.5vh, 2vw, 2vh) 3vw;
+        padding: clamp(1.5vh, 2vw, 2vh) 2.5vw;
     }
     .countdown {
         flex-direction: column;
         gap: clamp(1vh, 1.5vw, 2vh);
-        padding: clamp(1.5vh, 2vw, 2vh) 2vw;
+        padding: clamp(1.2vh, 1.8vw, 2vh) 2vw;
     }
     .countdown-item {
         min-width: clamp(20vw, 30%, 30vw);
@@ -539,10 +552,10 @@ body::before {
 }
 
 /* Sendforth Program Section */
-.sendforth {
+.sendforth-content {
     padding: clamp(3vh, 5vw, 5vh) clamp(2vw, 3rem, 5vw);
     width: 90%;
-    max-width: clamp(600px, 90%, 1200px);
+    max-width: clamp(600px, 90vw, 1200px);
     margin: 0 auto;
     margin-bottom: clamp(3vh, 5vw, 5vh);
     position: relative;
@@ -551,65 +564,53 @@ body::before {
     animation: slideInLeft 1s ease forwards 0.5s;
 }
 
-.sendforth-content {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.sendforth h2 {
+.sendforth-content h2 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
     font-weight: 900;
     color: #1a2a44;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.stepper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: clamp(1vw, 1.5rem, 2vw);
-    max-width: clamp(300px, 80%, 800px);
-    margin: 0 auto clamp(1.5vh, 2vw, 2vh);
+.sendforth-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1vw, 2rem, 2vw);
+    margin-bottom: clamp(2vh, 3vw, 3vh);
 }
 
-.stepper-item {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
+.detail-item {
+    flex: 1;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
     padding: clamp(1.5vh, 2vw, 2vh) clamp(1vw, 1.5rem, 2vw);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
 }
 
-.stepper-item:hover {
-    transform: translateY(-5px);
-}
-
-.stepper-item i {
+.detail-item i {
     color: #ffaa80;
-    font-size: 1.4rem;
-    margin-right: clamp(0.5vw, 0.8rem, 1vw);
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin-right: clamp(1vw, 1.5rem, 2vw);
     transition: transform 0.3s ease;
 }
 
-.stepper-item:hover i {
+.detail-item:hover i {
     transform: rotate(15deg);
 }
 
-.stepper-item p {
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+.detail-item p {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     color: #333;
     font-weight: 600;
     line-height: 1.6;
 }
 
-.stepper-item strong {
+.detail-item strong {
     color: #1a2a44;
     font-weight: 700;
 }
@@ -620,7 +621,8 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-top: clamp(1vh, 1.5vw, 2vh);
+    margin: clamp(2vh, 3vw, 3vh) auto;
+    display: block;
 }
 
 .side-image:hover {
@@ -628,15 +630,26 @@ body::before {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.additional-info {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    color: #333;
+    font-weight: 600;
+    margin-bottom: clamp(2vh, 3vw, 3vh);
+    text-align: center;
+}
+
 .rsvp-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
     text-decoration: none;
     border-radius: 25px;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .rsvp-btn:hover {
@@ -657,7 +670,7 @@ body::before {
     display: flex;
     justify-content: center;
     gap: clamp(1vw, 1.5rem, 2vw);
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(1vw, 1.5rem, 2vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(1vw, 1.5rem, 2vw);
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
     border-radius: 15px;
@@ -678,7 +691,7 @@ body::before {
 
 .count {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 900;
     display: block;
     transition: all 0.5s ease-out;
@@ -698,7 +711,7 @@ body::before {
 
 .launch-text {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 900;
     color: #1a2a44;
     margin-top: clamp(1vh, 1.5vw, 2vh);
@@ -706,23 +719,23 @@ body::before {
 }
 
 @media (max-width: 1024px) {
-    .stepper {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    .sendforth-details {
+        flex-direction: column;
+    }
+    .detail-item {
+        width: 100%;
     }
     .side-image {
-        max-width: 50%;
+        max-width: 70%;
     }
 }
 
 @media (max-width: 768px) {
-    .sendforth {
+    .sendforth-content {
         padding: clamp(2vh, 3vw, 3vh) 2vw;
     }
-    .sendforth-content {
-        padding: clamp(1.5vh, 2vw, 2vh) 3vw;
-    }
-    .stepper {
-        grid-template-columns: 1fr;
+    .detail-item {
+        padding: clamp(1.5vh, 2vw, 2vh) 2vw;
     }
     .side-image {
         max-width: 100%;
@@ -730,7 +743,7 @@ body::before {
     .countdown {
         flex-direction: column;
         gap: clamp(1vh, 1.5vw, 2vh);
-        padding: clamp(1.5vh, 2vw, 2vh) 2vw;
+        padding: clamp(1.2vh, 1.8vw, 2vh) 2vw;
     }
     .countdown-item {
         min-width: clamp(20vw, 30%, 30vw);
@@ -738,10 +751,10 @@ body::before {
 }
 
 /* Contact Section */
-.contact {
+.contact-content {
     padding: clamp(3vh, 5vw, 5vh) clamp(2vw, 3rem, 5vw);
     width: 90%;
-    max-width: clamp(600px, 90%, 1400px);
+    max-width: clamp(600px, 90vw, 1400px);
     margin: 0 auto;
     margin-bottom: clamp(3vh, 5vw, 5vh);
     position: relative;
@@ -750,65 +763,58 @@ body::before {
     animation: blurToClear 1s ease forwards 0.5s;
 }
 
-.contact-content {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-layout {
-    display: flex;
-    gap: clamp(2vw, 3rem, 3vw);
-    align-items: center;
-    width: 100%;
-    max-width: clamp(300px, 90%, 1200px);
-}
-
-.contact h2 {
+.contact-content h2 {
     font-family: 'Merriweather', serif;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 3.5vw, 3rem);
     font-weight: 900;
     color: #1a2a44;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.contact p {
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+.contact-content p {
+    font-size: clamp(0.9rem, 1.5vw, 1.4rem);
     color: #333;
     font-weight: 600;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(2vw, 3rem, 3vw);
+    align-items: flex-start;
+    margin-bottom: clamp(2vh, 3vw, 3vh);
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    padding: clamp(2vh, 3vw, 3vh) clamp(2vw, 3rem, 4vw);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5vh, 2vw, 2vh);
 }
 
 .form-instruction {
     font-family: 'Merriweather', serif;
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 700;
     color: #1a2a44;
     margin-bottom: clamp(2vh, 2.5vw, 2.5vh);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5vh, 2vw, 2vh);
-    width: 100%;
-    max-width: clamp(250px, 80%, 600px);
-    margin: 0 auto;
-}
-
 .contact-form input, .contact-form textarea {
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(2vw, 3rem, 3vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2vw, 3rem, 3vw);
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     background: rgba(255, 255, 255, 0.8);
     color: #333;
     transition: border-color 0.3s ease, transform 0.3s ease;
@@ -823,10 +829,10 @@ body::before {
 .contact-form button {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
     border: none;
     border-radius: 30px;
-    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -837,24 +843,8 @@ body::before {
     box-shadow: 0 6px 20px rgba(255, 170, 128, 0.4);
 }
 
-.social-links {
-    margin-top: clamp(2vh, 2.5vw, 2.5vh);
-}
-
-.social-links a {
-    color: #ffaa80;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    margin: 0 clamp(1.5vw, 2rem, 2vw);
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #ff8c42;
-    transform: scale(1.2);
-}
-
 .side-image {
-    max-width: 50%;
+    max-width: 40%;
     height: auto;
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -866,33 +856,39 @@ body::before {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 1024px) {
-    .contact-layout {
-        flex-direction: column;
-    }
-    .side-image {
-        max-width: 70%;
-    }
+.additional-info {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    color: #333;
+    font-weight: 600;
+    margin-bottom: clamp(2vh, 3vw, 3vh);
+    text-align: center;
 }
 
-@media (max-width: 768px) {
-    .contact {
-        padding: clamp(2vh, 3vw, 3vh) 2vw;
-    }
-    .contact-content {
-        padding: clamp(1.5vh, 2vw, 2vh) 3vw;
-    }
-    .contact-layout {
-        gap: clamp(1.5vh, 2vw, 2vh);
-    }
-    .side-image {
-        max-width: 100%;
+@media (max-width: 1024px) {
+    .contact-details {
+        flex-direction: column;
     }
     .contact-form {
         width: 100%;
     }
-    .social-links a {
-        margin: 0 clamp(1vw, 1.5rem, 1.5vw);
+    .side-image {
+        max-width: 70%;
+        margin: clamp(2vh, 3vw, 3vh) auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        padding: clamp(2vh, 3vw, 3vh) 2vw;
+    }
+    .contact-form {
+        padding: clamp(1.5vh, 2vw, 2vh) 2vw;
+    }
+    .side-image {
+        max-width: 100%;
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
     }
 }
 
@@ -900,7 +896,7 @@ body::before {
 .purchase {
     padding: clamp(3vh, 5vw, 5vh) clamp(2vw, 3rem, 5vw);
     width: 90%;
-    max-width: clamp(600px, 90%, 1200px);
+    max-width: clamp(600px, 90vw, 1200px);
     margin: 0 auto;
     margin-bottom: clamp(3vh, 5vw, 5vh);
     position: relative;
@@ -912,16 +908,19 @@ body::before {
 .purchase .book-card {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px);
-    padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-card-layout {
     display: flex;
     gap: clamp(1vw, 2rem, 2vw);
     align-items: center;
 }
 
 .purchase .book-card-text h3 {
-    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 800;
     color: #1a2a44;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -929,7 +928,7 @@ body::before {
 }
 
 .purchase .book-card-text p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     color: #333;
     font-weight: 600;
     line-height: 1.6;
@@ -939,10 +938,10 @@ body::before {
 .buy-now-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
-    padding: clamp(1.5vh, 2vw, 2vh) clamp(3vw, 4rem, 5vw);
+    padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
     text-decoration: none;
     border-radius: 25px;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -952,19 +951,22 @@ body::before {
     box-shadow: 0 6px 20px rgba(255, 170, 128, 0.4);
 }
 
-@media (max-width: 768px) {
-    .purchase .book-card {
+@media (max-width: 1024px) {
+    .book-card-layout {
         flex-direction: column;
         text-align: center;
     }
-    .purchase .book-card img {
-        max-width: 100%;
+    .book-card-layout img {
+        max-width: 70%;
     }
+}
+
+@media (max-width: 768px) {
     .purchase {
         padding: clamp(2vh, 3vw, 3vh) 2vw;
     }
     .purchase .book-card {
-        padding: clamp(1.5vh, 2vw, 2vh) 3vw;
+        padding: clamp(1.5vh, 2vw, 2vh) 2.5vw;
     }
 }
 
@@ -979,7 +981,7 @@ body::before {
     bottom: 0;
     width: 100%;
     z-index: 1000;
-    height: 8vh;
+    height: clamp(5vh, 8vh, 8vh);
     min-height: 50px;
     display: flex;
     flex-direction: column;
@@ -993,7 +995,7 @@ body::before {
 
 .footer .social-links a {
     color: #ffaa80;
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
     margin: 0 clamp(1vw, 1.5rem, 1.5vw);
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -1009,15 +1011,10 @@ body::before {
     font-size: 0.7rem;
     color: #1a2a44;
     background: #ffaa80;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    margin-left: -0.6rem;
-    margin-top: -1.6rem;
-}
-
-.footer p {
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
-    color: #555;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-top: -2rem;
+    white-space: nowrap;
 }
 
 /* Animations */
@@ -1027,17 +1024,17 @@ body::before {
 }
 
 @keyframes slideInRight {
-    from { transform: translateX(100px); opacity: 0; }
+    from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInLeft {
-    from { transform: translateX(-100px); opacity: 0; }
+    from { transform: translateX(-100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInUp {
-    from { transform: translateY(50px); opacity: 0; }
+    from { transform: translateY(100%); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
 
@@ -1046,52 +1043,71 @@ body::before {
     to { filter: blur(0); opacity: 1; }
 }
 
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .navbar {
-        padding: 1rem clamp(1vw, 2rem, 3vw);
+        padding: 1rem clamp(1.5vw, 2rem, 3vw);
+        height: clamp(5vh, 8vh, 8vh);
     }
     .navbar ul {
-        gap: clamp(1rem, 1.5vw, 2rem);
+        gap: clamp(1rem, 2vw, 3vw);
     }
-    .hero {
-        padding: clamp(2vh, 3vw, 3vh) clamp(1vw, 2rem, 3vw);
+    .navbar a {
+        font-size: clamp(0.8rem, 1.2vw, 1rem);
     }
-    .hero-content {
+    .contact-info a {
+        font-size: clamp(0.7rem, 1vw, 0.9rem);
+    }
+    .hero-content, .about-author-content, .book-details-content, .sendforth-content, .contact-content, .purchase .book-card {
         padding: clamp(1.5vh, 2vw, 2vh) clamp(2vw, 3rem, 4vw);
     }
-    .about-author, .book-details, .sendforth, .contact, .purchase {
-        padding: clamp(2vh, 3vw, 3vh) clamp(1vw, 2rem, 3vw);
+    .hero, .about-author, .book-details, .sendforth-content, .contact-content, .purchase {
+        padding: clamp(2vh, 3vw, 3vh) 2vw;
     }
-    .text-image-pair, .book-card, .contact-layout, .purchase .book-card {
+    .text-image-pair, .contact-details, .book-card-layout, .sendforth-details {
         flex-direction: column;
-        text-align: center;
     }
-    .text-image-pair img, .book-card img, .side-image {
+    .side-image, .book-card-layout img {
         max-width: 70%;
     }
-    .stepper {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    .button-container .order-btn, .buy-now-btn, .rsvp-btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        height: 12vh;
-        padding: 1rem 2vw;
-    }
     .navbar ul {
-        gap: clamp(0.8rem, 1.5vw, 1.5rem);
-        margin-top: clamp(1vh, 1.5vw, 1.5vh);
+        gap: clamp(0.8rem, 1.5vw, 2vw);
+    }
+    .hero-content h1 {
+        font-size: clamp(1.2rem, 3.5vw, 2.5rem);
+    }
+    .hero-content p, .hero-btn {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    }
+    .about-author-content h2, .book-details h2, .sendforth-content h2, .contact-content h2 {
+        font-size: clamp(1.2rem, 3vw, 2.2rem);
+    }
+    .tab-link, .book-card-text h3, .book-card-text h4, .book-details-content h3, .form-instruction, .launch-text {
+        font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    }
+    .book-card-text p, .detail-item p, .contact-content p, .additional-info {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    }
+    .count {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    .social-links a {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
     }
     .footer .social-links a {
-        margin: 0 clamp(0.8vw, 1rem, 1.2vw);
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
     }
-    .stepper {
-        grid-template-columns: 1fr;
+    .countdown-item {
+        min-width: clamp(25vw, 35%, 35vw);
     }
-    .hero-btn, .order-btn, .rsvp-btn, .buy-now-btn, .contact-form button {
-        padding: clamp(1vh, 1.5vw, 1.5vh) clamp(2vw, 3rem, 4vw);
+    .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
     }
 }
