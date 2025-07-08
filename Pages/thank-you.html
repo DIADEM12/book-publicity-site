@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <style>
     * {
@@ -19,13 +19,27 @@
       font-family: 'Montserrat', sans-serif;
       overflow: hidden;
       position: relative;
+      background: url('../images/authorpic.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(3px);
+      z-index: 0;
     }
 
     #tsparticles {
       position: fixed;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: 1;
       top: 0;
       left: 0;
     }
@@ -35,67 +49,117 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
+      background: rgba(26, 42, 68, 0.8); /* Darker background for contrast */
       border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       padding: 40px 30px;
       text-align: center;
-      color: #fff;
-      max-width: 500px;
+      color: #ffffff;
+      max-width: 600px;
       width: 90%;
-      animation: fadeInUp 1.2s ease forwards;
+      animation: floatUp 1.2s ease-out forwards;
+      z-index: 2;
     }
 
     .thankyou-container h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      animation: slideIn 1s ease;
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      color: #ffaa80;
+      text-shadow: 0 0 15px #ffaa80, 0 0 25px #ff8c42;
+      animation: pulseGlow 2s infinite alternate;
     }
 
     .thankyou-container p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+      font-size: 1.3rem;
+      margin-bottom: 35px;
       color: #e0f7ff;
-      animation: fadeIn 1.5s ease;
+      animation: fadeInSlide 1.5s ease-out forwards;
+    }
+
+    .thankyou-message {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00aaff;
+      text-shadow: 0 0 10px #00aaff, 0 0 20px #007acc;
+      animation: bounceIn 1.8s ease-out forwards;
     }
 
     .back-btn {
       display: inline-block;
-      background: #00aaff;
+      background: linear-gradient(90deg, #00aaff, #007acc);
       color: white;
-      padding: 12px 24px;
+      padding: 14px 28px;
       border-radius: 25px;
       text-decoration: none;
       transition: all 0.3s ease;
       font-weight: bold;
+      position: relative;
+      overflow: hidden;
     }
 
     .back-btn:hover {
-      background: #007acc;
-      transform: scale(1.05);
-      box-shadow: 0 0 12px rgba(0, 170, 255, 0.6);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00aaff, 0 0 30px #007acc;
     }
 
-    @keyframes fadeInUp {
+    .back-btn::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.2);
+      transition: width 0.3s ease;
+    }
+
+    .back-btn:hover::after {
+      width: 100%;
+    }
+
+    @keyframes floatUp {
       from {
         opacity: 0;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -60%) scale(0.9);
       }
       to {
         opacity: 1;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1);
       }
     }
 
-    @keyframes slideIn {
-      0% { transform: translateY(-20px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+    @keyframes pulseGlow {
+      from {
+        transform: scale(1);
+        text-shadow: 0 0 10px #ffaa80, 0 0 20px #ff8c42;
+      }
+      to {
+        transform: scale(1.05);
+        text-shadow: 0 0 20px #ffaa80, 0 0 40px #ff8c42, 0 0 60px #ff8c42;
+      }
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes particleGlow {
+      0% { box-shadow: 0 0 5px #ffffff; }
+      50% { box-shadow: 0 0 15px #ffaa80, 0 0 25px #00aaff; }
+      100% { box-shadow: 0 0 5px #ffffff; }
     }
   </style>
 </head>
@@ -104,7 +168,8 @@
 
   <div class="thankyou-container">
     <h1>Thank You!</h1>
-    <p>Your message has been received. We’ll get back to you soon.</p>
+    <p class="thankyou-message">Your voice has ignited a spark of connection! We’re thrilled to receive your message and will respond with divine inspiration soon.</p>
+    <p>Your support fuels our mission to reveal and glorify Jesus through every word.</p>
     <a href="index.html" class="back-btn"><i class="fas fa-home"></i> Back to Home</a>
   </div>
 
@@ -114,20 +179,41 @@
       background: { color: { value: "transparent" } },
       fpsLimit: 60,
       particles: {
-        number: { value: 80 },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: { min: 1, max: 4 } },
+        number: { value: 100 },
+        color: { value: ["#ffaa80", "#00aaff", "#ffffff"] },
+        shape: { type: ["circle", "star"] },
+        opacity: { value: 0.7 },
+        size: { value: { min: 2, max: 6 } },
         move: {
           enable: true,
-          speed: 1,
+          speed: 2,
           direction: "top",
           straight: false,
-          outModes: { default: "out" }
-        }
+          outModes: { default: "out" },
+          attract: { enable: true, distance: 150 }
+        },
+        rotate: { value: 0, random: true, enable: true, animation: { enable: true, speed: 10 } }
+      },
+      interactivity: {
+        events: { onHover: { enable: true, mode: "repulse" } },
+        modes: { repulse: { distance: 100 } }
       },
       detectRetina: true
+    });
+
+    // Add subtle hover effect to container
+    const container = document.querySelector('.thankyou-container');
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      container.style.transformOrigin = `${x}px ${y}px`;
+      container.style.transition = 'transform 0.3s ease';
+      container.style.transform = `perspective(1000px) rotateX(${((y - rect.height / 2) / rect.height) * 10}deg) rotateY(${((x - rect.width / 2) / rect.width) * -10}deg) scale(1.02)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      container.style.transform = `translate(-50%, -50%) scale(1)`;
     });
   </script>
 </body>
