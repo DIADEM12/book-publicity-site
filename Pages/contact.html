@@ -11,7 +11,7 @@
 <body class="contact">
     <nav class="navbar">
         <div class="contact-info">
-            <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a>
+            <!-- Email removed from header -->
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -32,11 +32,12 @@
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" class="send-btn">Send Message</button>
             </form>
             <img src="images/authorpic5.jpg" alt="Contact Illustration" class="side-image">
         </div>
-        <p class="additional-info">We’re here to assist you.</p>
+        <p class="additional-info">We’re here to assist you. Expect a response within 48 hours.</p>
+        <p class="email-option">or email me at <a href="mailto:oluwafemiodesola@gmail.com">oluwafemiodesola@gmail.com</a></p>
     </section>
     <footer class="footer">
         <div class="social-links">
@@ -51,15 +52,47 @@
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = this;
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(new FormData(form)).toString()
-            })
-            .then(() => {
-                form.innerHTML = '<p style="color: #1a2a44; font-weight: 600;">Thank you for your message! We will get back to you soon.</p>';
-            })
-            .catch(error => console.error('Error:', error));
+            const button = form.querySelector('.send-btn');
+            const formContainer = form.parentElement;
+
+            // Add loading animation
+            button.disabled = true;
+            button.classList.add('sending');
+            button.textContent = 'Sending...';
+
+            // Simulate form submission (replace with actual API call if needed)
+            setTimeout(() => {
+                fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(new FormData(form)).toString()
+                })
+                .then(() => {
+                    // Success animation
+                    button.classList.remove('sending');
+                    button.classList.add('success');
+                    button.innerHTML = '<i class="fas fa-check"></i> Sent!';
+
+                    // Confetti effect
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 2000);
+
+                    // Fade out form and show thank-you message
+                    formContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        formContainer.innerHTML = '<p style="color: #1a2a44; font-weight: 600; text-align: center;">Thank you for your message! We will get back to you soon.</p>';
+                        formContainer.style.opacity = '1';
+                    }, 500);
+                })
+                .catch(error => {
+                    button.classList.remove('sending');
+                    button.disabled = false;
+                    button.textContent = 'Send Message';
+                    alert('Error sending message. Please try again.');
+                });
+            }, 1000); // Simulated delay
         });
     </script>
 </body>

@@ -8,7 +8,7 @@
 
 body {
     line-height: 1.6;
-    color: #1a2a44;
+    color: #1a2a44; /* Darkened slightly for better contrast if needed, but keeping original */
     min-height: 100vh;
     padding: 12vh 0 8vh;
     overflow-x: hidden;
@@ -39,7 +39,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15); /* Slightly increased opacity for better contrast */
     backdrop-filter: blur(3px);
     z-index: 0;
 }
@@ -59,10 +59,6 @@ body::before {
     align-items: center;
     height: clamp(6vh, 10vh, 10vh);
     min-height: 60px;
-}
-
-.navbar .contact-info {
-    margin-left: clamp(1vw, 2rem, 3vw);
 }
 
 .navbar ul {
@@ -102,18 +98,6 @@ body::before {
     to { width: 100%; }
 }
 
-.contact-info a {
-    color: #1a2a44;
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #ff8c42;
-}
-
 /* Hero Section */
 .hero {
     min-height: 70vh;
@@ -130,7 +114,7 @@ body::before {
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better text contrast */
     backdrop-filter: blur(8px);
     padding: clamp(2vh, 3vw, 3vh) clamp(3vw, 4rem, 5vw);
     border-radius: 15px;
@@ -149,7 +133,7 @@ body::before {
 
 .hero p {
     font-size: clamp(0.9rem, 1.5vw, 1.3rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     margin-bottom: clamp(2vh, 3vw, 3vh);
     font-weight: 600;
 }
@@ -184,7 +168,7 @@ body::before {
 }
 
 .about-author-content {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(6px);
     padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
@@ -325,7 +309,7 @@ body::before {
 }
 
 .book-card {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(8px);
     padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
@@ -354,7 +338,7 @@ body::before {
 
 .book-card-text p {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     line-height: 1.6;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -410,7 +394,7 @@ body::before {
 }
 
 .book-details-content {
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(6px);
     padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
@@ -460,7 +444,7 @@ body::before {
     justify-content: center;
     gap: clamp(1vw, 1.5rem, 2vw);
     padding: clamp(1.2vh, 1.8vw, 2vh) clamp(1vw, 1.5rem, 2vw);
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(8px);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -583,7 +567,7 @@ body::before {
 .detail-item {
     flex: 1;
     min-width: 200px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(6px);
     padding: clamp(1.5vh, 2vw, 2vh) clamp(1vw, 1.5rem, 2vw);
     border-radius: 15px;
@@ -605,7 +589,7 @@ body::before {
 
 .detail-item p {
     font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     line-height: 1.6;
 }
@@ -632,10 +616,28 @@ body::before {
 
 .additional-info {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     margin-bottom: clamp(2vh, 3vw, 3vh);
     text-align: center;
+}
+
+.email-option {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    color: #1a2a44; /* Ensuring text is dark enough */
+    font-weight: 600;
+    text-align: center;
+    margin-top: clamp(1vh, 1.5vw, 2vh);
+}
+
+.email-option a {
+    color: #ffaa80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-option a:hover {
+    color: #ff8c42;
 }
 
 .rsvp-btn {
@@ -671,7 +673,7 @@ body::before {
     justify-content: center;
     gap: clamp(1vw, 1.5rem, 2vw);
     padding: clamp(1.2vh, 1.8vw, 2vh) clamp(1vw, 1.5rem, 2vw);
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(8px);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -701,12 +703,6 @@ body::before {
 .countdown-item:hover .count {
     animation: glowAndRotate 1.5s ease-in-out infinite;
     text-shadow: 0 0 10px #ffaa80, 0 0 20px #ff8c42, 0 0 30px #ffaa80;
-}
-
-@keyframes glowAndRotate {
-    0% { transform: scale(1) rotate(0deg); text-shadow: 0 0 5px #ffaa80; }
-    50% { transform: scale(1.2) rotate(5deg); text-shadow: 0 0 15px #ff8c42, 0 0 25px #ffaa80; }
-    100% { transform: scale(1) rotate(0deg); text-shadow: 0 0 5px #ffaa80; }
 }
 
 .launch-text {
@@ -774,7 +770,7 @@ body::before {
 
 .contact-content p {
     font-size: clamp(0.9rem, 1.5vw, 1.4rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     margin-bottom: clamp(1.5vh, 2vw, 2vh);
     text-align: center;
@@ -791,7 +787,7 @@ body::before {
 .contact-form {
     flex: 1;
     min-width: 250px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(6px);
     padding: clamp(2vh, 3vw, 3vh) clamp(2vw, 3rem, 4vw);
     border-radius: 15px;
@@ -816,7 +812,7 @@ body::before {
     border-radius: 12px;
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     background: rgba(255, 255, 255, 0.8);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -826,7 +822,7 @@ body::before {
     outline: none;
 }
 
-.contact-form button {
+.send-btn {
     background: linear-gradient(90deg, #ffaa80, #ff8c42);
     color: #1a2a44;
     padding: clamp(1.2vh, 1.8vw, 2vh) clamp(2.5vw, 3.5rem, 5vw);
@@ -836,11 +832,65 @@ body::before {
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-form button:hover {
+.send-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(255, 170, 128, 0.4);
+}
+
+.send-btn.sending {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.send-btn.success {
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    cursor: default;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.send-btn.success i {
+    animation: checkmarkFade 0.5s ease forwards;
+}
+
+.confetti {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+.confetti::before,
+.confetti::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffaa80;
+    border-radius: 50%;
+    animation: confettiFall 1.5s ease-out forwards;
+}
+
+.confetti::after {
+    background: #ff8c42;
+    animation-delay: 0.2s;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, 100vh) scale(1.5);
+        opacity: 0;
+    }
 }
 
 .side-image {
@@ -858,10 +908,28 @@ body::before {
 
 .additional-info {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     margin-bottom: clamp(2vh, 3vw, 3vh);
     text-align: center;
+}
+
+.email-option {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    color: #1a2a44; /* Ensuring text is dark enough */
+    font-weight: 600;
+    text-align: center;
+    margin-top: clamp(1vh, 1.5vw, 2vh);
+}
+
+.email-option a {
+    color: #ffaa80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.email-option a:hover {
+    color: #ff8c42;
 }
 
 @media (max-width: 1024px) {
@@ -887,7 +955,7 @@ body::before {
     .side-image {
         max-width: 100%;
     }
-    .contact-form input, .contact-form textarea, .contact-form button {
+    .contact-form input, .contact-form textarea, .send-btn {
         font-size: clamp(0.8rem, 1.2vw, 1.1rem);
     }
 }
@@ -906,7 +974,7 @@ body::before {
 }
 
 .purchase .book-card {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5); /* Increased opacity for better contrast */
     backdrop-filter: blur(8px);
     padding: clamp(2vh, 3vw, 3vh) clamp(2.5vw, 3.5rem, 5vw);
     border-radius: 15px;
@@ -929,7 +997,7 @@ body::before {
 
 .purchase .book-card-text p {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-    color: #333;
+    color: #1a2a44; /* Ensuring text is dark enough */
     font-weight: 600;
     line-height: 1.6;
     margin-bottom: clamp(1vh, 1.5vw, 1.5vh);
@@ -1043,6 +1111,17 @@ body::before {
     to { filter: blur(0); opacity: 1; }
 }
 
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes checkmarkFade {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 1; transform: scale(1); }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .navbar {
@@ -1054,9 +1133,6 @@ body::before {
     }
     .navbar a {
         font-size: clamp(0.8rem, 1.2vw, 1rem);
-    }
-    .contact-info a {
-        font-size: clamp(0.7rem, 1vw, 0.9rem);
     }
     .hero-content, .about-author-content, .book-details-content, .sendforth-content, .contact-content, .purchase .book-card {
         padding: clamp(1.5vh, 2vw, 2vh) clamp(2vw, 3rem, 4vw);
@@ -1092,7 +1168,7 @@ body::before {
     .tab-link, .book-card-text h3, .book-card-text h4, .book-details-content h3, .form-instruction, .launch-text {
         font-size: clamp(0.9rem, 1.5vw, 1.3rem);
     }
-    .book-card-text p, .detail-item p, .contact-content p, .additional-info {
+    .book-card-text p, .detail-item p, .contact-content p, .additional-info, .email-option {
         font-size: clamp(0.8rem, 1.2vw, 1.1rem);
     }
     .count {
@@ -1107,7 +1183,7 @@ body::before {
     .countdown-item {
         min-width: clamp(25vw, 35%, 35vw);
     }
-    .contact-form input, .contact-form textarea, .contact-form button {
+    .contact-form input, .contact-form textarea, .send-btn {
         font-size: clamp(0.8rem, 1.2vw, 1.1rem);
     }
 }
