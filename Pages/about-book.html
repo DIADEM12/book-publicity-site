@@ -18,8 +18,8 @@
             <li><a href="about-author.html">About</a></li>
             <li><a href="about-book.html">Book</a></li>
             <li><a href="purchase.html">Purchase</a></li>
-            <li><a href="contact.html">Contact</a></li>
             <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <section class="book-details">
@@ -28,8 +28,8 @@
             <div class="book-card-layout">
                 <img src="images/booksite2.jpg" alt="Book Cover" class="book-cover">
                 <div class="book-card-text">
-                    <h3 style="color: #ffaa80;">Jesus Revealed, Jesus Glorified</h3>
-                    <h4>The Legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church</h4>
+                    <h3 style="color: #1a2a44;">Jesus Revealed, Jesus Glorified</h3>
+                    <h4 style="color: #1a2a44;">The Legacy of Rev. Dr. John Akin Oyelade at Fountain of Peace Baptist Church</h4>
                     <p>This book is a tribute and a timeless record of a ministry that reveals and glorifies Christ. Through personal stories and moments of impact, it captures Rev. Dr. John Akin Oyelade’s spiritual legacy, calling readers to behold Christ’s beauty.</p>
                 </div>
             </div>
@@ -41,14 +41,11 @@
             <h3>Why This Book Matters</h3>
             <div class="text-image-pair">
                 <div class="text-content">
-                    <p>Writing this book honors Rev’d Dr. John Oyelade’s transformative leadership at Fountain of Peace Baptist Church, preserving a legacy of faith and unity for future generations.</p>
+                    <p>Writing this book in honour of Rev’d Dr John Oyelade is not merely an act of recognition; it is an intentional effort to preserve and commemorate a legacy that has left an indelible mark on Fountain of Peace Baptist Church, the community of Oyo, and the wider body of Christ. In the rush of everyday life, it is all too easy for remarkable stories of faith, sacrifice, and leadership to fade into the background. This book serves as a timely reminder of the power of God’s work through dedicated servants like Rev’d Dr Oyelade.</p>
+                    <p>His leadership has spanned nearly two decades, a period in which he has helped shape not just a church but an entire movement of believers committed to peace, unity, and spiritual growth. It is crucial that such a transformative journey be captured and reflected upon, so that future generations can be inspired by the lessons learnt and the testimony of what God has done through his leadership. This book will not only highlight the milestones achieved under his guidance but also encourage others to embrace the mantle of leadership with humility, faith, and a deep commitment to serving God and His people.</p>
                 </div>
                 <img src="images/authorpic5.jpg" alt="Author Illustration" class="side-image">
             </div>
-        </div>
-        <div class="countdown-container">
-            <div id="countdown" class="countdown"></div>
-            <p class="launch-text">LAUNCHING SOON!</p>
         </div>
     </section>
     <footer class="footer">
@@ -62,29 +59,8 @@
     </footer>
     <script>
         function updateCountdown() {
-            const launchDate = new Date("July 20, 2025 00:00:00").getTime();
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown").innerHTML = `
-                <div class="countdown-item"><span class="count">${days}</span><br>Days</div>
-                <div class="countdown-item"><span class="count">${hours}</span><br>Hours</div>
-                <div class="countdown-item"><span class="count">${minutes}</span><br>Minutes</div>
-                <div class="countdown-item"><span class="count">${seconds}</span><br>Seconds</div>
-            `;
-
-            if (distance < 0) {
-                document.getElementById("countdown").innerHTML = "Launched!";
-            }
+            // Removed countdown logic as per request
         }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
     </script>
 </body>
 </html>
